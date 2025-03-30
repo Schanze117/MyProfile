@@ -37,7 +37,7 @@ const Contact = () => {
         }
     };
 
-    // Handle form submission logic here (e.g., send data to server)
+    // Handle form submission logic here
 
     return (
         <div className="contact-page">

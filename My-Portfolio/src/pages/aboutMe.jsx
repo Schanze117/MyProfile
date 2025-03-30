@@ -1,32 +1,36 @@
 import React from 'react';
 import { TiHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaGitSquare, LiaNetworkWiredSolid, FaGithubSquare } from 'react-icons/fa';
 import { SiExpress, SiTypescript, SiPostgresql } from 'react-icons/si';
-
+import image from '../assets/images/placeholder';
 
 function aboutMe() {
-  return (
-    <div className="aboutMe">
-      <h1>Here is a little background information about me!</h1>
-        <p>
-            I am a Full-Stack Developer with a passion for creating dynamic and responsive web applications. 
-            I have a strong foundation in both front-end and back-end technologies, and I am always eager to learn and adapt to new challenges.
-        </p>
-      <h2>Proficiencies</h2>
-      <ul className="proficiencies-list">
-        <li><FaGitSquare /> Git</li>
-        <li><FaGithubSquare /> GitHub</li>
-        <li><TiHtml5 /> HTML</li>
-        <li><FaCss3 /> CSS</li>
-        <li><FaJs /> JavaScript</li>
-        <li><SiTypescript /> TypeScript</li>
-        <li><FaReact /> React</li>
-        <li><FaNodeJs /> Node.js</li>
-        <li><SiExpress /> Express.js</li>
-        <li><SiPostgresql /> PostgreSQL</li>
-        <li><LiaNetworkWiredSolid /> REST APIs</li>
-      </ul>
-    </div>
-  );
+    return (
+        <div className="aboutMe">
+            <img src={image} alt="Image of Aaron Schanzenbach" classname='image' />
+            <h1>Here is a little background information about me!</h1>
+            <p>
+                I was born in Aberdeen, South Dakota and raised in the Northern Black Hills. I have always had a passion for, art, technology, and problem-solving, which initially led me to pursue a career in Techncal Theatre.
+                I trained and worked in various roles in my time at South Dakota State University and later working at the CAM-PLEX of Wyoming; including lighting, rigging, carpentry, sound/audio, and stage management. Throughout i gained valuable technical skills and experience in project management, teamwork, and communication.
+                I also have an Assosciate of Applied Science in Culinary Arts from Mitchell Technical College, which has given me a unique perspective on dedication, creation, creativity, and attention to detail. I have always enjoyed cooking and working with others in a kitchen, and I believe that these skills have helped me develop a strong work ethic and a passion for creating. Not to mention my wife enjoys me being handy in the kitchen.
+                I am currently enrolled in a Full-Stack Developer bootcamp, where I am learning the latest technologies and best practices in web development. I am excited to apply my skills and knowledge to create innovative and user-friendly applications that solve real-world problems.
+                I believe with my diverse background and strong work ethic, I can bring a unique perspective to any team and contribute to the success of any project!
+            </p>
+            <h2>Proficiencies</h2>
+            <ul className="proficiencies-list">
+                <li><FaGitSquare /> Git</li>
+                <li><FaGithubSquare /> GitHub</li>
+                <li><TiHtml5 /> HTML</li>
+                <li><FaCss3 /> CSS</li>
+                <li><FaJs /> JavaScript</li>
+                <li><SiTypescript /> TypeScript</li>
+                <li><FaReact /> React</li>
+                <li><FaNodeJs /> Node.js</li>
+                <li><SiExpress /> Express.js</li>
+                <li><SiPostgresql /> PostgreSQL</li>
+                <li><LiaNetworkWiredSolid /> REST APIs</li>
+            </ul>
+        </div>
+    );
 }
 
 export default aboutMe;
