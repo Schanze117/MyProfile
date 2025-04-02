@@ -10,7 +10,7 @@ export default function Nav() {
                     <Link to="/" className={currentPath === '/' ? 'active' : ''}>Home</Link>
                 </li>
                 <li>
-                    <Link to="/projects" className={currentPath === '/projects' ? 'active' : ''}>Projects</Link>
+                    <Link to="/portfolio" className={currentPath === '/portfolio' ? 'active' : ''}>Projects</Link>
                 </li>
                 <li>
                     <Link to="/contact" className={currentPath === '/contact' ? 'active' : ''}>Contact</Link>
