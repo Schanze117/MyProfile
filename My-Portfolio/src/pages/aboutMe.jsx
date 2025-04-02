@@ -1,7 +1,9 @@
 import React from 'react';
-import { TiHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaGitSquare, LiaNetworkWiredSolid, FaGithubSquare } from 'react-icons/fa';
+import { FaCss3, FaJs, FaReact, FaNodeJs, FaGitSquare, FaGithubSquare } from 'react-icons/fa';
+import { TiHtml5 } from "react-icons/ti"
+import { LiaNetworkWiredSolid } from "react-icons/lia"
 import { SiExpress, SiTypescript, SiPostgresql } from 'react-icons/si';
-import image from '../assets/images/placeholder';
+import image from '../assets/images/ProfilePicture.jpg';
 
 function aboutMe() {
     return (
