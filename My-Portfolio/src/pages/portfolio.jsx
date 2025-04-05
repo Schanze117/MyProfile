@@ -9,7 +9,8 @@ import project6Image from '../assets/images/CandidateSearch.png';
 export default function Portfolio() {
     return (
         <div className="portfolio-page">
-            <h1>My Projects</h1>
+            <h1 style= {{textAlign:"center"}}>My Projects</h1>
+            <p style={{ fontStyle: "italic",  textAlign: "center"}}>Click on the picture to view the app!</p>
             <div className="projects-container">
                 <Project 
                     title="Pop Up Trivia"

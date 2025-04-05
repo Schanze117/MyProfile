@@ -2,6 +2,9 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --primary: #999ded; /* Primary color for links and buttons */
+  --light: #ffffff; /* Light text color */
+  --dark: #242424; /* Dark background color */
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -21,7 +24,25 @@ a {
 a:hover {
   color: #535bf2;
 }
+.header {
+  background-image: url('./assets/images/YS1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-left: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 25vh;
+  width: auto;
+}
 
+.header h1 {
+  font-size: 4rem;
+  padding: 10px;
+  color: var(--light);
+  text-shadow: 2px 2px 4px #000000;
+}
 body {
   margin: 0;
   display: flex;
@@ -34,11 +55,53 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+.nav-home {
+  list-style-type: none;
+  padding: 10px 100px 10px 0;
+  display: flex;
+}
+  
+.nav-icon {
+  font-size: 1.75rem;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--primary);
+  text-shadow: 1px 1px 4px #000000;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: var(--dark);
+  color: var(--light);
+  text-shadow: none;
+  border-radius: 50px;
+}
+
+.nav-link.active {
+  color: var(--light);
+  text-shadow: none;
+  background-color: var(--dark);
+  border-radius: 50px;
+}
 .project {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   gap: 20px;
   padding: 20px;
+}
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 .project-content {
   background: #1a1a1a;
@@ -46,10 +109,27 @@ h1 {
   padding: 20px;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  width: 100%;
+  max-width: 650px;
 }
 .project-content h2 {
   margin-top: 0;
   font-size: 1.5em;
+}
+.project-content a {
+  display: block;
+  /*restrict size of picture */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 15px;
+  transition: transform 0.3s ease;
+}
+.project-description {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  text-align: center; /* Center text inside the container */
 }
 .project-description p {
   margin: 10px 0;
@@ -65,16 +145,18 @@ h1 {
   padding: 0.5em 1em;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+  text-align: center;
 }
 .project-description a:hover {
   background-color: #535bf2; /* Darker shade on hover */
 }
 .projects-container {
-  /* Ensure the projects container is responsive and centered */
-  width: 100%;
-  max-width: 1200px; /* Limit the max width for larger screens */
-  margin: auto; /* Center the container */
-  padding: 20px; /* Padding around the projects */
+ display: grid;
+  grid-template-columns: repeat(2, minmax(600px, 1fr));
+  gap: 10px;
+  margin: 10px auto;
+  max-width: 1600px; /* Limit the width for better readability */
+  padding: 0 20px;
 }
 /* Ensure the body has a consistent background and text color */
 body {
@@ -120,7 +202,28 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+.aboutMe {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 100%;
+  text-align: center;
+}
+.aboutMe-image-container {
+  display: 'flex'; 
+  align-items: 'center'; 
+  justify-content: 'center'; 
+  gap: '20px';
+  background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzJwNGtwNHdsMGZmbnd6ZGFsMjJubHVwNTQzamVleTV2YmFpcjk0aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef4v2WS5WdKq0q6aQK/giphy.gif'); /* Path to your .gif file */
+  background-size: cover; /* Ensures the .gif covers the entire container */
+  background-position: center; /* Centers the .gif */
+  background-repeat: no-repeat; /* Prevents the .gif from repeating */
+  border-radius: 20px; /*Optional: Rounds the corners of the container */
+  width:auto;
 
+}
 .proficiencies-list {
   list-style-type: none;
   padding: 0;
@@ -131,6 +234,7 @@ button:focus-visible {
   margin-bottom: 10px;
   display: flex;
   align-items: center;
+  text-align: center;
 }
 
 .proficiencies-list li svg {

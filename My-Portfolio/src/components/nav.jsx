@@ -5,18 +5,18 @@ export default function Nav() {
 
     return (
         <nav>
-            <ul>
-                <li>
-                    <Link to="/" className={currentPath === '/' ? 'active' : ''}>Home</Link>
+            <ul className= "nav-home">
+                <li className= "nav-icon">
+                    <Link to="/" className={currentPath === '/' ? 'nav-link active' : 'nav-link'}>Home</Link>
                 </li>
-                <li>
-                    <Link to="/portfolio" className={currentPath === '/portfolio' ? 'active' : ''}>Projects</Link>
+                <li className= "nav-icon">
+                    <Link to="/portfolio" className={currentPath === '/portfolio' ? 'nav-link active' : 'nav-link'}>Projects</Link>
                 </li>
-                <li>
-                    <Link to="/contact" className={currentPath === '/contact' ? 'active' : ''}>Contact</Link>
+                <li className= "nav-icon">
+                    <Link to="/contact" className={currentPath === '/contact' ? 'nav-link active' : 'nav-link'}>Contact</Link>
                 </li>
-                <li>
-                    <Link to="/aboutMe" className={currentPath === '/aboutMe' ? 'active' : ''}>About Me</Link>
+                <li className= "nav-icon">
+                    <Link to="/aboutMe" className={currentPath === '/aboutMe' ? 'nav-link active' : 'nav-link'}>About Me</Link>
                 </li>
             </ul>
         </nav>

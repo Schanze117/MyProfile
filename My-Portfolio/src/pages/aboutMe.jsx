@@ -2,13 +2,15 @@ import React from 'react';
 import { FaCss3, FaJs, FaReact, FaNodeJs, FaGitSquare, FaGithubSquare } from 'react-icons/fa';
 import { TiHtml5 } from "react-icons/ti"
 import { LiaNetworkWiredSolid } from "react-icons/lia"
-import { SiExpress, SiTypescript, SiPostgresql } from 'react-icons/si';
+import { SiExpress, SiTypescript, SiPostgresql, SiMongodb, SiApollographql } from 'react-icons/si';
 import image from '../assets/images/ProfilePicture.jpg';
 
 function aboutMe() {
     return (
         <div className="aboutMe">
-            <img src={image} alt="Image of Aaron Schanzenbach" classname='image' />
+            <div className="aboutMe-image-container"> 
+            <img src={image} alt="Image of Aaron Schanzenbach" classname='image' style={{ borderRadius: "100px", width: "200px", height:"400px"}}/>
+            </div>
             <h1>Here is a little background information about me!</h1>
             <p>
                 I was born in Aberdeen, South Dakota and raised in the Northern Black Hills. I have always had a passion for, art, technology, and problem-solving, which initially led me to pursue a career in Techncal Theatre.
@@ -30,6 +32,8 @@ function aboutMe() {
                 <li><SiExpress /> Express.js</li>
                 <li><SiPostgresql /> PostgreSQL</li>
                 <li><LiaNetworkWiredSolid /> REST APIs</li>
+                <li><SiMongodb /> MongoDB</li>
+                <li><SiApollographql /> ApollographQL</li>
             </ul>
         </div>
     );
