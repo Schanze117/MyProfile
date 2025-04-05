@@ -2,9 +2,16 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  --primary: #999ded; /* Primary color for links and buttons */
-  --light: #ffffff; /* Light text color */
-  --dark: #242424; /* Dark background color */
+  --primary: #a8711e;
+  /* Primary color for links and buttons */
+  --secondary: #84920d;
+  /* Secondary color for hover effects */
+  --tertiary: #244d17;
+  /* Tertiary color for accents and borders */
+  --light: #ffffff;
+  /* Light text color */
+  --dark: #242424;
+  /* Dark background color */
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -18,12 +25,14 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--secondary);
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
+
 .header {
   background-image: url('./assets/images/YS1.jpg');
   background-repeat: no-repeat;
@@ -40,9 +49,10 @@ a:hover {
 .header h1 {
   font-size: 4rem;
   padding: 10px;
-  color: var(--light);
+  color: var(--secondary);
   text-shadow: 2px 2px 4px #000000;
 }
+
 body {
   margin: 0;
   display: flex;
@@ -55,12 +65,13 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
 .nav-home {
   list-style-type: none;
   padding: 10px 100px 10px 0;
   display: flex;
 }
-  
+
 .nav-icon {
   font-size: 1.75rem;
   margin: 0;
@@ -91,18 +102,21 @@ h1 {
   background-color: var(--dark);
   border-radius: 50px;
 }
+
 .project {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   gap: 20px;
   padding: 20px;
 }
+
 .project-image {
   width: 100%;
   height: auto;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
+
 .project-content {
   background: #1a1a1a;
   color: #fff;
@@ -112,10 +126,12 @@ h1 {
   width: 100%;
   max-width: 650px;
 }
+
 .project-content h2 {
   margin-top: 0;
   font-size: 1.5em;
 }
+
 .project-content a {
   display: block;
   /*restrict size of picture */
@@ -125,44 +141,68 @@ h1 {
   margin-top: 15px;
   transition: transform 0.3s ease;
 }
+
 .project-description {
   display: flex;
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center children horizontally */
-  text-align: center; /* Center text inside the container */
+  flex-direction: column;
+  /* Stack children vertically */
+  align-items: center;
+  /* Center children horizontally */
+  text-align: left;
+  /* Center text inside the container */
+
 }
+
 .project-description p {
   margin: 10px 0;
   font-size: 1.1em;
-  color: #ccc; /* Lighter text for description */
+  color: #ccc;
+  /* Lighter text for description */
 }
+
 .project-description a {
   display: inline-block;
   margin-top: 10px;
   text-decoration: none;
-  color: #fff; /* Ensure link is white for contrast */
-  background-color: #646cff; /* Button-like appearance */
+  color: #fff;
+  /* Ensure link is white for contrast */
+  background-color: var(--primary);
+  /* Button-like appearance */
   padding: 0.5em 1em;
   border-radius: 4px;
   transition: background-color 0.3s ease;
   text-align: center;
 }
+
 .project-description a:hover {
-  background-color: #535bf2; /* Darker shade on hover */
+  background-color: var(--secondary);
+  /* Darker shade on hover */
 }
+
 .projects-container {
- display: grid;
+  display: grid;
   grid-template-columns: repeat(2, minmax(600px, 1fr));
   gap: 10px;
   margin: 10px auto;
-  max-width: 1600px; /* Limit the width for better readability */
+  max-width: 1600px;
+  /* Limit the width for better readability */
   padding: 0 20px;
+}
+.portfolio-page h1 {
+  font-size: 3.2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--primary);
+  /* Sets the color of the title to primary color */
 }
 /* Ensure the body has a consistent background and text color */
 body {
-  background-color: var(--background-color, #242424); /* Fallback for older browsers */
-  color: var(--color, rgba(255, 255, 255, 0.87)); /* Fallback for older browsers */
+  background-color: var(--background-color, #242424);
+  /* Fallback for older browsers */
+  color: var(--color, rgba(255, 255, 255, 0.87));
+  /* Fallback for older browsers */
 }
+
 /* Ensure buttons have a consistent appearance */
 button {
   border-radius: 8px;
@@ -175,33 +215,44 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 .social-icons {
   display: flex;
   gap: 10px;
   justify-content: center;
   margin-top: 20px;
 }
+
 .social-icons a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background-color: #1a1a1a; /* Fallback for older browsers */
-  color: #fff; /* Icon color */
+  background-color: #1a1a1a;
+  /* Fallback for older browsers */
+  color: #fff;
+  /* Icon color */
 }
+
 .social-icons a:hover {
-  background-color: #535bf2; /* Change background on hover */
-  color: #fff; /* Ensure icon color remains white */
+  background-color: var(--primary);
+  /* Change background on hover */
+  color: #fff;
+  /* Ensure icon color remains white */
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
 .aboutMe {
   background-color: #1a1a1a;
   color: #fff;
@@ -210,21 +261,104 @@ button:focus-visible {
   margin: 20px auto;
   max-width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  /* Ensures the section takes full height */
+  ;
 }
-.aboutMe-image-container {
-  display: 'flex'; 
-  align-items: 'center'; 
-  justify-content: 'center'; 
-  gap: '20px';
-  background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzJwNGtwNHdsMGZmbnd6ZGFsMjJubHVwNTQzamVleTV2YmFpcjk0aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef4v2WS5WdKq0q6aQK/giphy.gif'); /* Path to your .gif file */
-  background-size: cover; /* Ensures the .gif covers the entire container */
-  background-position: center; /* Centers the .gif */
-  background-repeat: no-repeat; /* Prevents the .gif from repeating */
-  border-radius: 20px; /*Optional: Rounds the corners of the container */
-  width:auto;
+
+.aboutMe h1 {
+  flex: 1 1 55%;
+  /* Makes the paragraph take up 60% of the container */
+  text-align: left;
+  /* Ensures the text is justified */
+  order: -2;
+  /* Moves the title to the top */
+  color: var(--tertiary);
+  /* Sets the color of the title to secondary color */
+}
+
+.aboutMe h2 {
+  font-size: 2em;
+  text-align: right;
+  flex: 1 1 40%;
+  /* Makes the subtitle take up 40% of the container */
+  order: -1;
+  /* Moves the subtitle to the top */
+  margin: 0;
+  /* Removes unnecessary margins */
+  color: var(--tertiary);
+  /* Sets the color of the subtitle to primary color */
 
 }
+
+.aboutMe p {
+  flex: 1 1 55%;
+  /* Makes the paragraph take up 60% of the container */
+  text-align: justify;
+  /* Ensures the text is justified */
+  /* Add margin only to the right*/
+  margin: 0 20px;
+  /* Adds margin to the left and right for spacing */
+  /* add a decorative vertical line break*/
+  border-right: 6px groove var(--tertiary);
+  /* Decorative vertical line */
+  padding-right: 20px;
+  /* Adds padding to the right of the text */
+  display: flex;
+}
+
+.aboutMeDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* flex: 1;
+  flex-direction: column; Stacks children vertically */
+}
+/* .aboutMeDetails h2 {
+  order: -1; 
+  margin: 0; 
+  text-align:right; 
+} */
+.aboutMe-image-container {
+  display: 'flex';
+  align-items: 'center';
+  justify-content: 'center';
+  gap: '20px';
+  background-image: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXlldXJoanp3ZjM3bjhvNDRzcnh2bW9ucG9sejRrc2t1cXNrdmpneiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mnsoYRRpoFRHBoybyO/giphy.gif');
+  /* Path to your .gif file */
+  background-size: cover;
+  /* Ensures the .gif covers the entire container */
+  background-position: center;
+  /* Centers the .gif */
+  background-repeat: no-repeat;
+  /* Prevents the .gif from repeating */
+  border-radius: 20px;
+  /*Rounds the corners of the container */
+ 
+
+}
+
+.aboutMe-proficiencies {
+  order: 0;
+  /* Keep the proficiencies list in its current position */
+  flex: 1;
+  /* Makes the proficiencies section take up 35% of the container */
+  margin: 0;
+  /* Removes unnecessary margins */
+}
+
 .proficiencies-list {
+  order: 0;
+  /* Keep the proficiencies list in its current position */
+  flex: 1;
+  /* Makes the proficiencies section take up 35% of the container */
+  margin: 0;
+  /* Removes unnecessary margins */
+  flex: 1 1 35%;
+  /* Makes the list take up 35% of the container */
   list-style-type: none;
   padding: 0;
 }
@@ -240,15 +374,69 @@ button:focus-visible {
 .proficiencies-list li svg {
   margin-right: 10px;
 }
+
+.contact-page {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  margin: 0 20px 0 0 auto;
+  max-width: 100%;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contact-page-box {
+  width: 400px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid --dark;
+  text-align: left;
+  border-radius: 4px;
+  background-color: var(--dark);
+  /* Dark background for input */
+  color: var(--light);
+  /* White text for contrast */
+}
+
+.contact-page-box input,
+.contact-page-box textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--dark);
+  /* Dark background for input */
+  color: var(--light);
+  /* White text for contrast */
+  font-size: 1em;
+  align-items: right;
+  box-sizing: border-box;
+}
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
 /*media query to change screen layout when viewing it at 1070px or less */
 @media (max-width: 1070px) {
   body {
     flex-direction: column;
     align-items: center;
   }
+
   h1 {
     font-size: 2.5em;
   }
+
   button {
     width: 100%;
   }
@@ -259,9 +447,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }

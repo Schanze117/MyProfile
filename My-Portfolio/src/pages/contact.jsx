@@ -41,10 +41,10 @@ const Contact = () => {
 
     return (
         <div className="contact-page">
-            <h1>Contact Me</h1>
+            <h1>Get In Touch!</h1>
             <form onSubmit={handleSubmit} noValidate>
                 {error.name && <span className="error">Name is required</span>}
-                <div>
+                <div className= "contact-page-box">
                     <label htmlFor="name">Name:</label>
                     <input
                         type="text"
@@ -55,7 +55,7 @@ const Contact = () => {
                         required
                     />
                 </div>
-                <div>
+                <div className= "contact-page-box">
                     {error.email && <span className="error">Valid email is required</span>}
                     <label htmlFor="email">Email:</label>
                     <input
@@ -67,7 +67,7 @@ const Contact = () => {
                         required
                     />
                 </div>
-                <div>
+                <div className= "contact-page-box">
                     {error.message && <span className="error">Message is required</span>}
                     <label htmlFor="message">Message:</label>
                     <textarea
