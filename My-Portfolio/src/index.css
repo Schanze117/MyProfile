@@ -104,6 +104,7 @@ h1 {
   background-color: var(--dark);
   border-radius: 50px;
 }
+
 .home h1 {
   font-size: 3.5em;
   margin-top: 20px;
@@ -111,12 +112,14 @@ h1 {
   text-align: center;
   text-shadow: 2px 2px 4px #000000;
 }
+
 .home p {
   font-size: 1.2em;
   color: var(--quaternary);
   margin: 20px;
   text-align: center;
 }
+
 .project {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
@@ -132,7 +135,7 @@ h1 {
 }
 
 .project-content {
-  background:#3d3d32 ;
+  background: #3d3d32;
   color: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -156,10 +159,12 @@ h1 {
   margin-top: 15px;
   transition: transform 0.3s ease;
 }
+
 .project-content a:hover {
   transform: scale(1.05);
   /* Slightly enlarge the image on hover */
 }
+
 .project-description {
   display: flex;
   flex-direction: column;
@@ -206,6 +211,7 @@ h1 {
   /* Limit the width for better readability */
   padding: 0 20px;
 }
+
 .portfolio-page {
   background-color: #1a1a1a;
   color: #fff;
@@ -219,6 +225,7 @@ h1 {
   justify-content: center;
   min-height: 100vh;
 }
+
 .portfolio-page h1 {
   font-size: 3.2em;
   margin-bottom: 20px;
@@ -226,9 +233,11 @@ h1 {
   color: var(--primary);
   /* Sets the color of the title to primary color */
 }
+
 .portfolio-page p {
   color: var(--quaternary);
 }
+
 body {
   background-color: var(--background-color, #242424);
   /* Fallback for older browsers */
@@ -276,6 +285,7 @@ button {
   color: #fff;
   /* Ensure icon color remains white */
 }
+
 /* button {
   color: var(--quaternary)
 } */
@@ -295,7 +305,6 @@ button:focus-visible {
   border-radius: 8px;
   margin: 20px auto;
   max-width: 100%;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -318,19 +327,18 @@ button:focus-visible {
 .aboutMe h2 {
   font-size: 2em;
   text-align: right;
-  flex: 1 1 40%;
   /* Makes the subtitle take up 40% of the container */
-  order: -1;
-  /* Moves the subtitle to the top */
   margin: 0;
   /* Removes unnecessary margins */
   color: var(--primary);
   /* Sets the color of the subtitle to primary color */
+  order: -2;
+
 
 }
 
 .aboutMe p {
-  flex: 1 1 55%;
+  flex: 1 1 40%;
   /* Makes the paragraph take up 60% of the container */
   text-align: justify;
   /* Ensures the text is justified */
@@ -349,31 +357,52 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  /* flex: 1;
-  flex-direction: column; Stacks children vertically */
+  /* flex: 1;*/
+ 
 }
+
 .aboutMeDetails p {
-  color: var(--quaternary)
+  color: var(--quaternary);
+  order: -1;
+  margin: 20px;
 }
+
 .aboutMe-image-container {
-  display: 'flex';
-  align-items: 'center';
-  justify-content: 'center';
+  flex: 0 0 auto;
   gap: '20px';
-  background-image: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXlldXJoanp3ZjM3bjhvNDRzcnh2bW9ucG9sejRrc2t1cXNrdmpneiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mnsoYRRpoFRHBoybyO/giphy.gif');
-  /* Path to your .gif file */
-  background-size: cover;
-  /* Ensures the .gif covers the entire container */
+  border-radius: 20px;
+  height: 340px;
+  width: auto;
   background-position: center;
   /* Centers the .gif */
   background-repeat: no-repeat;
   /* Prevents the .gif from repeating */
-  border-radius: 20px;
-  /*Rounds the corners of the container */
- 
+  background-size:cover;
+  /* set the .gif just after image*/
+  background-image:url( 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWYxbGJpZXQ3cGFpcXNwNnV4NWZ3cGVkanJndnlueDM1MW82dDY1ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tuQgrAx08jfj2/giphy.gif');
+
 
 }
+.aboutMe-Image-Filler {
+  flex: 1 ;
+  height: 300px;
+  width: 700px;
+  background-image:url( 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWYxbGJpZXQ3cGFpcXNwNnV4NWZ3cGVkanJndnlueDM1MW82dDY1ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tuQgrAx08jfj2/giphy.gif');
+  border: 10px solid black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
 
+  background-position: center;
+  /* Centers the .gif */
+  background-repeat: no-repeat;
+  /* Prevents the .gif from repeating */
+  background-size:cover;
+  /* set the .gif just after image*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
 .aboutMe-proficiencies {
   order: 0;
   /* Keep the proficiencies list in its current position */
@@ -421,7 +450,9 @@ button:focus-visible {
   flex-direction: column;
   align-items: flex-end;
 }
-
+.contact-page button {
+  color: var(--quaternary);
+}
 .contact-page-box {
   width: 400px;
   padding: 10px;
@@ -450,6 +481,7 @@ button:focus-visible {
   align-items: right;
   box-sizing: border-box;
 }
+
 .footer {
   background-color: #1a1a1a;
   color: #fff;

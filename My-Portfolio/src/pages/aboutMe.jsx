@@ -8,16 +8,19 @@ import image from '../assets/images/ProfilePicture.jpg';
 function aboutMe() {
     return (
         <div className="aboutMe">
-            <div className="aboutMe-image-container">
-                <img src={image} alt="Image of Aaron Schanzenbach" classname='image' 
-                style={{ 
-                    borderRadius: "100px", 
-                    width: "200px", 
-                    height: "400px",
-                    border: "10px solid black",
-                    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.5)",
-                     }} />
-            </div>
+            {/* <div className= "aboutMe-box"> */}
+                <div className="aboutMe-image-container">
+                    <img src={image} alt="Image of Aaron Schanzenbach" classname='image'
+                        style={{
+                            borderRadius: "100px",
+                            width: "150px",
+                            height: "300px",
+                            border: "10px solid black",
+                            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.5)",
+                        }} />
+                        {/* <div className="aboutMe-Image-Filler"></div> */}
+                </div>
+            {/* </div> */}
             <div className="aboutMeDetails">
                 <h1>A Brief History...</h1>
                 <p>
@@ -28,22 +31,22 @@ function aboutMe() {
                     I believe with my diverse background and strong work ethic, I can bring a unique perspective to any team and contribute to the success of any project!
                 </p>
                 {/* <div className="aboutMe-proficiencies"> */}
-                    <h2>Proficiencies</h2>
-                    <ul className="proficiencies-list">
-                        <li><FaGitSquare /> Git</li>
-                        <li><FaGithubSquare /> GitHub</li>
-                        <li><TiHtml5 /> HTML</li>
-                        <li><FaCss3 /> CSS</li>
-                        <li><FaJs /> JavaScript</li>
-                        <li><SiTypescript /> TypeScript</li>
-                        <li><FaReact /> React</li>
-                        <li><FaNodeJs /> Node.js</li>
-                        <li><SiExpress /> Express.js</li>
-                        <li><SiPostgresql /> PostgreSQL</li>
-                        <li><LiaNetworkWiredSolid /> REST APIs</li>
-                        <li><SiMongodb /> MongoDB</li>
-                        <li><SiApollographql /> ApollographQL</li>
-                    </ul>
+                <h2>Proficiencies</h2>
+                <ul className="proficiencies-list">
+                    <li><FaGitSquare /> Git</li>
+                    <li><FaGithubSquare /> GitHub</li>
+                    <li><TiHtml5 /> HTML</li>
+                    <li><FaCss3 /> CSS</li>
+                    <li><FaJs /> JavaScript</li>
+                    <li><SiTypescript /> TypeScript</li>
+                    <li><FaReact /> React</li>
+                    <li><FaNodeJs /> Node.js</li>
+                    <li><SiExpress /> Express.js</li>
+                    <li><SiPostgresql /> PostgreSQL</li>
+                    <li><LiaNetworkWiredSolid /> REST APIs</li>
+                    <li><SiMongodb /> MongoDB</li>
+                    <li><SiApollographql /> ApollographQL</li>
+                </ul>
                 {/* </div> */}
             </div>
         </div>

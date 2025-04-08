@@ -1,7 +1,7 @@
 export default function home() {
     return (
         <div className="home">
-            <h1>Welcome to My Portfolio!</h1>
+            <h1>Welcome to My Portfolio</h1>
             <p>
                 I'm Aaron Schanzenbach, I am new to the coding world; however i believe by combining my previous work experience with my newfound knowledge I have a lot to offer it!
                 I and my family reside in northern Wyoming, where I am currently enrolled in a Full-Stack Developer bootcamp. 

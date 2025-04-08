@@ -41,7 +41,7 @@ const Contact = () => {
 
     return (
         <div className="contact-page">
-            <h1>Get In Touch!</h1>
+            <h1>Get In Touch</h1>
             <form onSubmit={handleSubmit} noValidate>
                 {error.name && <span className="error">Name is required</span>}
                 <div className= "contact-page-box">
