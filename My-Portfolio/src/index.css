@@ -522,3 +522,92 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+@media (max-width: 1024px) {
+  .nav-container {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .nav-left,
+  .nav-right {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .nav-center {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .home-content p {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr; /* Show projects in a single column */
+  }
+
+  .nav-left {
+  margin-right: 10px; /* Space between left links and logo */
+}
+
+.nav-right {
+  margin-left: 10px;  /* Space between logo and right links */
+}
+}
+
+@media (max-width: 425px) {
+
+  .content {
+    padding: 0px 0px 40px;
+    margin-top: -40px;
+  }
+
+  .app-container::before,
+  .app-container::after {
+  width: 10px;
+}
+  
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4px 2px;      /* Smaller padding */
+    min-height: 40px;      /* Optional: set a smaller min height */
+    margin-top: -30px; /* Adjust margin for smaller screens */
+  }
+  .nav-center {
+    order: 1;
+    justify-content: flex-start;
+    flex: none;
+  }
+  .nav-logo {
+    width: 110px;           /* Smaller logo */
+    height: auto;
+  }
+  .nav-link {
+    font-size: 0.85rem;    /* Smaller font */
+    padding: 4px 8px;      /* Smaller padding */
+  }
+  .nav-left,
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;              /* Less gap between links */
+  }
+  .nav-right {
+    order: 2;
+    margin-left: -20px; /* Adjust margin for right links */
+    align-items: flex-start
+  }
+
+  .nav-left {
+    order: 0;
+    margin-right: -20px;
+
+  }
+}
