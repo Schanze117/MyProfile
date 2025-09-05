@@ -30,6 +30,13 @@
   box-sizing: border-box;
 }
 
+/* Prevent horizontal scrolling on mobile */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
 a {
   font-weight: 500;
   color: var(--secondary);
@@ -45,12 +52,13 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-left: 75px;
+  padding: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 25vh;
-  width: auto;
+  width: 100%;
+  max-width: 100%;
 }
 
 .header h1 {
@@ -62,10 +70,10 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -75,8 +83,11 @@ h1 {
 
 .nav-home {
   list-style-type: none;
-  padding: 10px 100px 10px 0;
+  padding: 10px 20px;
+  margin: 0;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-icon {
@@ -127,7 +138,7 @@ h1 {
 
 .project {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   padding: 20px;
 }
@@ -146,7 +157,7 @@ h1 {
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   width: 100%;
-  max-width: 650px;
+  max-width: 100%;
 }
 
 .project-content h2 {
@@ -389,9 +400,9 @@ button:focus-visible {
 
 }
 .aboutMe-Image-Filler {
-  flex: 1 ;
   height: 300px;
-  width: 700px;
+  width: 100%;
+  max-width: 300px;
   background-image:url( 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWYxbGJpZXQ3cGFpcXNwNnV4NWZ3cGVkanJndnlueDM1MW82dDY1ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tuQgrAx08jfj2/giphy.gif');
   border: 10px solid black;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -459,10 +470,11 @@ button:focus-visible {
   color: var(--quaternary);
 }
 .contact-page-box {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid --dark;
+  border: 1px solid var(--dark);
   text-align: left;
   border-radius: 4px;
   background-color: var(--dark);
@@ -545,30 +557,31 @@ button:focus-visible {
 
 @media (max-width: 768px) {
   .header {
-    padding: 20px;
+    padding: 20px 10px;
     height: 20vh;
     min-height: 150px;
   }
   
   .header h1 {
     font-size: 2.5rem;
+    text-align: center;
   }
   
   .nav-home {
-    padding: 10px 20px;
+    padding: 10px;
     flex-wrap: wrap;
     justify-content: center;
   }
   
   .nav-icon {
-    padding: 0 10px;
+    padding: 0 8px;
   }
   
   .home {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 20px;
+    padding: 20px 10px;
   }
   
   .home h1 {
@@ -576,14 +589,18 @@ button:focus-visible {
   }
   
   .home p {
-    margin-top: 20px;
+    margin: 20px 10px;
     text-align: center;
     font-size: 1.1em;
   }
   
   .portfolio-page {
-    padding: 20px;
-    grid-template-columns: 1fr; /* Show projects in a single column */
+    padding: 20px 10px;
+    margin: 20px 10px;
+  }
+  
+  .projects-container {
+    padding: 0 10px;
   }
   
   .project {
@@ -593,10 +610,12 @@ button:focus-visible {
   
   .project-content {
     max-width: 100%;
+    margin: 0 auto;
   }
   
   .aboutMe {
-    padding: 20px;
+    padding: 20px 10px;
+    margin: 20px 10px;
   }
   
   .aboutMe h1 {
@@ -609,6 +628,13 @@ button:focus-visible {
     font-size: 1.8em;
   }
   
+  .aboutMe p {
+    border-right: none;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 15px;
+    margin: 10px 0;
+  }
+  
   .aboutMeDetails {
     flex-direction: column;
   }
@@ -616,11 +642,12 @@ button:focus-visible {
   .aboutMe-Image-Filler {
     width: 250px;
     height: 250px;
-    border-radius: 50%;
+    max-width: 90vw;
   }
   
   .contact-page {
-    padding: 20px;
+    padding: 20px 10px;
+    margin: 20px 10px;
     text-align: center;
     align-items: center;
   }
@@ -633,92 +660,196 @@ button:focus-visible {
 
 @media (max-width: 425px) {
   .header {
-    padding: 15px;
+    padding: 15px 5px;
     height: 18vh;
     min-height: 120px;
   }
   
   .header h1 {
-    font-size: 2rem;
-  }
-  
-  .content {
-    padding: 10px;
+    font-size: 1.8rem;
+    padding: 5px;
   }
   
   .nav-home {
-    padding: 8px;
-    flex-direction: column;
-    gap: 8px;
+    padding: 8px 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
   }
   
   .nav-icon {
-    padding: 0 5px;
+    padding: 0 3px;
+    font-size: 1.5rem;
   }
   
   .nav-link {
-    font-size: 0.9rem;
-    padding: 8px 12px;
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+  
+  .home {
+    padding: 15px 5px;
   }
   
   .home h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .home p {
-    font-size: 1rem;
-    margin: 15px;
+    font-size: 0.95rem;
+    margin: 15px 5px;
   }
   
   .portfolio-page {
-    padding: 15px;
+    padding: 15px 5px;
+    margin: 15px 5px;
   }
   
   .portfolio-page h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .projects-container {
+    padding: 0 5px;
   }
   
   .project {
     padding: 5px;
+    grid-template-columns: 1fr;
   }
   
   .project-content {
-    padding: 15px;
+    padding: 15px 10px;
   }
   
   .aboutMe {
-    padding: 15px;
+    padding: 15px 5px;
+    margin: 15px 5px;
   }
   
   .aboutMe h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .aboutMe h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
+  }
+  
+  .aboutMe p {
+    margin: 10px 5px;
+    padding: 10px;
   }
   
   .aboutMe-Image-Filler {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
+    max-width: 80vw;
+    border: 5px solid black;
+  }
+  
+  .proficiencies-list {
+    padding: 0 10px;
   }
   
   .proficiencies-list li {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    padding: 8px;
+    margin-bottom: 8px;
   }
   
   .contact-page {
-    padding: 15px;
+    padding: 15px 5px;
+    margin: 15px 5px;
   }
   
   .contact-page-box {
     width: 100%;
-    padding: 15px;
+    padding: 12px 8px;
+  }
+  
+  .contact-page-box input,
+  .contact-page-box textarea {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+  
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 8px;
   }
   
   .social-icons a {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    padding: 10px 3px;
+    height: 15vh;
+    min-height: 100px;
+  }
+  
+  .header h1 {
     font-size: 1.5rem;
+  }
+  
+  .nav-home {
+    padding: 5px 3px;
+  }
+  
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 5px 6px;
+  }
+  
+  .home h1 {
+    font-size: 1.5rem;
+  }
+  
+  .home p {
+    font-size: 0.9rem;
+    margin: 10px 3px;
+  }
+  
+  .portfolio-page {
+    padding: 10px 3px;
+    margin: 10px 3px;
+  }
+  
+  .portfolio-page h1 {
+    font-size: 1.5rem;
+  }
+  
+  .aboutMe {
+    padding: 10px 3px;
+    margin: 10px 3px;
+  }
+  
+  .aboutMe h1 {
+    font-size: 1.5rem;
+  }
+  
+  .aboutMe h2 {
+    font-size: 1.2rem;
+  }
+  
+  .aboutMe-Image-Filler {
+    width: 150px;
+    height: 150px;
+    max-width: 75vw;
+  }
+  
+  .contact-page {
+    padding: 10px 3px;
+    margin: 10px 3px;
+  }
+  
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
   }
 }
