@@ -148,6 +148,7 @@ h1 {
   height: auto;
   border-radius: 8px;
   transition: transform 0.3s ease;
+  object-fit: cover;
 }
 
 .project-content {
@@ -158,6 +159,7 @@ h1 {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   width: 100%;
   max-width: 100%;
+  overflow: hidden;
 }
 
 .project-content h2 {
@@ -169,7 +171,7 @@ h1 {
 .project-content a {
   display: block;
   /*restrict size of picture */
-  max-width: 100%;
+  max-width: 85%;
   height: auto;
   border-radius: 8px;
   margin-top: 15px;
@@ -220,7 +222,7 @@ h1 {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   margin: 10px auto;
   max-width: 1600px;

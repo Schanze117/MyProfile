@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaCss3, FaJs, FaReact, FaNodeJs, FaGitSquare, FaGithubSquare } from 'react-icons/fa';
+import { FaCss3, FaJs, FaReact, FaNodeJs, FaGitSquare, FaGithubSquare, FaPython} from 'react-icons/fa';
 import { TiHtml5 } from "react-icons/ti"
 import { LiaNetworkWiredSolid } from "react-icons/lia"
 import { SiExpress, SiTypescript, SiPostgresql, SiMongodb, SiApollographql } from 'react-icons/si';
@@ -46,6 +46,7 @@ function aboutMe() {
                     <li><LiaNetworkWiredSolid /> REST APIs</li>
                     <li><SiMongodb /> MongoDB</li>
                     <li><SiApollographql /> ApollographQL</li>
+                    <li><FaPython /> Python</li>
                 </ul>
                 {/* </div> */}
             </div>
