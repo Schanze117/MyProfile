@@ -25,6 +25,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Essential for mobile responsiveness */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 a {
   font-weight: 500;
   color: var(--secondary);
@@ -204,7 +209,7 @@ h1 {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(2, minmax(600px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
   margin: 10px auto;
   max-width: 1600px;
@@ -539,75 +544,181 @@ button:focus-visible {
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 20px;
+    height: 20vh;
+    min-height: 150px;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .nav-home {
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-icon {
+    padding: 0 10px;
+  }
+  
   .home {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    padding: 20px;
   }
+  
+  .home h1 {
+    font-size: 2.5em;
+  }
+  
   .home p {
     margin-top: 20px;
     text-align: center;
+    font-size: 1.1em;
   }
+  
   .portfolio-page {
+    padding: 20px;
     grid-template-columns: 1fr; /* Show projects in a single column */
   }
-
-  .nav-left {
-  margin-right: 10px; /* Space between left links and logo */
-}
-
-.nav-right {
-  margin-left: 10px;  /* Space between logo and right links */
-}
+  
+  .project {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+  
+  .project-content {
+    max-width: 100%;
+  }
+  
+  .aboutMe {
+    padding: 20px;
+  }
+  
+  .aboutMe h1 {
+    text-align: center;
+    font-size: 2.5em;
+  }
+  
+  .aboutMe h2 {
+    text-align: center;
+    font-size: 1.8em;
+  }
+  
+  .aboutMeDetails {
+    flex-direction: column;
+  }
+  
+  .aboutMe-Image-Filler {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  }
+  
+  .contact-page {
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .contact-page-box {
+    width: 100%;
+    max-width: 400px;
+  }
 }
 
 @media (max-width: 425px) {
-
-  .content {
-    padding: 0px 0px 40px;
-    margin-top: -40px;
+  .header {
+    padding: 15px;
+    height: 18vh;
+    min-height: 120px;
   }
-
-  .app-container::before,
-  .app-container::after {
-  width: 10px;
-}
   
-  .nav-container {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 4px 2px;      /* Smaller padding */
-    min-height: 40px;      /* Optional: set a smaller min height */
-    margin-top: -30px; /* Adjust margin for smaller screens */
+  .header h1 {
+    font-size: 2rem;
   }
-  .nav-center {
-    order: 1;
-    justify-content: flex-start;
-    flex: none;
+  
+  .content {
+    padding: 10px;
   }
-  .nav-logo {
-    width: 110px;           /* Smaller logo */
-    height: auto;
-  }
-  .nav-link {
-    font-size: 0.85rem;    /* Smaller font */
-    padding: 4px 8px;      /* Smaller padding */
-  }
-  .nav-left,
-  .nav-right {
+  
+  .nav-home {
+    padding: 8px;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 6px;              /* Less gap between links */
+    gap: 8px;
   }
-  .nav-right {
-    order: 2;
-    margin-left: -20px; /* Adjust margin for right links */
-    align-items: flex-start
+  
+  .nav-icon {
+    padding: 0 5px;
   }
-
-  .nav-left {
-    order: 0;
-    margin-right: -20px;
-
+  
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+  
+  .home h1 {
+    font-size: 2rem;
+  }
+  
+  .home p {
+    font-size: 1rem;
+    margin: 15px;
+  }
+  
+  .portfolio-page {
+    padding: 15px;
+  }
+  
+  .portfolio-page h1 {
+    font-size: 2rem;
+  }
+  
+  .project {
+    padding: 5px;
+  }
+  
+  .project-content {
+    padding: 15px;
+  }
+  
+  .aboutMe {
+    padding: 15px;
+  }
+  
+  .aboutMe h1 {
+    font-size: 2rem;
+  }
+  
+  .aboutMe h2 {
+    font-size: 1.5em;
+  }
+  
+  .aboutMe-Image-Filler {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .proficiencies-list li {
+    font-size: 1rem;
+  }
+  
+  .contact-page {
+    padding: 15px;
+  }
+  
+  .contact-page-box {
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .social-icons a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
   }
 }
